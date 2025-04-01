@@ -1,24 +1,10 @@
 # dingtalk-mcp
 本项目是一个钉钉MCP（Message Connector Protocol）服务，提供了与钉钉企业应用交互的API接口。项目基于Go语言开发，支持员工信息查询和消息发送等功能。
 
-# 使用
+# 安装
 
-## 下载项目
 ```bash
-git clone git@github.com:zhaoyunxing92/dingtalk-mcp.git
-```
-## 进入项目目录
-```bash
-cd dingtalk-mcp
-```
-
-## 安装依赖
-```bash
-go mod tidy
-```
-## 编译项目
-```bash
-go install
+go install github.com/zhaoyunxing92/dingtalk-mcp@latest
 ```
 
 ## 配置MCP服务
