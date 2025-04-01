@@ -6,7 +6,6 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 
 	"github.com/zhaoyunxing92/dingtalk-mcp/internal/service"
