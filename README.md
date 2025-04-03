@@ -1,8 +1,18 @@
 # dingtalk-mcp
+[![smithery badge](https://smithery.ai/badge/@zhaoyunxing92/dingtalk-mcp)](https://smithery.ai/server/@zhaoyunxing92/dingtalk-mcp)
 本项目是一个钉钉MCP（Message Connector Protocol）服务，提供了与钉钉企业应用交互的API接口。项目基于Go语言开发，支持员工信息查询和消息发送等功能。
 
 # 安装
 
+### Installing via Smithery
+
+To install DingTalk Message Connector for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@zhaoyunxing92/dingtalk-mcp):
+
+```bash
+npx -y @smithery/cli install @zhaoyunxing92/dingtalk-mcp --client claude
+```
+
+### Manual Installation
 ```bash
 go install github.com/zhaoyunxing92/dingtalk-mcp@latest
 ```
@@ -46,3 +56,4 @@ go install github.com/zhaoyunxing92/dingtalk-mcp@latest
 | recall_corp_conversation | 撤回给员工的消息 |
 | send_corp_conversation | 企业用户发送文本消息 |
 | send_markdown_corp_conversation | 企业用户发送Markdown格式消息 |
+
