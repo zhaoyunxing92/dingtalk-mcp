@@ -65,10 +65,10 @@ func main() {
 	service.NewMessageService(client).AddTools(svc)
 
 	// sse model
-	// sse := server.NewSSEServer(svc)
-	// if err := sse.Start(":8100"); err != nil {
-	// 	fmt.Println("SSE Server error", err)
-	// }
+	//sse := server.NewSSEServer(svc)
+	//if err := sse.Start(":8100"); err != nil {
+	//	fmt.Println("SSE Server error", err)
+	//}
 
 	// stdio model
 	if err := server.ServeStdio(svc); err != nil {
