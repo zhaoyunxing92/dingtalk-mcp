@@ -1,0 +1,37 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - DINGTALK_AGENT_ID
+      - DINGTALK_KEY
+      - DINGTALK_SECRET
+    properties:
+      DINGTALK_AGENT_ID:
+        type: string
+        description: The agent ID provided by DingTalk.
+      DINGTALK_KEY:
+        type: string
+        description: The app key for DingTalk.
+      DINGTALK_SECRET:
+        type: string
+        description: The app secret for DingTalk.
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: '/app/dingtalk-mcp',
+      args: [],
+      env: {
+        DINGTALK_AGENT_ID: config.DINGTALK_AGENT_ID,
+        DINGTALK_KEY: config.DINGTALK_KEY,
+        DINGTALK_SECRET: config.DINGTALK_SECRET
+      }
+    })
+  exampleConfig:
+    DINGTALK_AGENT_ID: "123456"
+    DINGTALK_KEY: exampleKey
+    DINGTALK_SECRET: exampleSecret
